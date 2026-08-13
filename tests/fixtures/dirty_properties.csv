@@ -1,0 +1,7 @@
+raw_address,city,state,zip_code,property_type,year_built,last_sale_price,last_sale_date,absentee_owner,is_vacant
+"123 MAIN ST.",Denver,CO,80202,SFR,1985,"$450,000",2001-05-20,true,false
+"123 Main Street",Denver,CO,80202,Single Family,1985,450000,05/20/2001,TRUE,FALSE
+"123 main st.",Denver,CO,80202,sfr,1985,450000,2001-05-20,True,False
+"456 Oak Ave",Aurora,CO,80010,Condo,2010,"320,000 USD",2015-11-12,false,false
+"789 Pine Rd",,CO,80111,,nineteen ninety,,,,
+"555 ERROR ST",Denver,CO,999,Unknown,1750,-500,2026-01-01,,

@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: reli
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: reli_db
+    ports:
+      - "5432:5432"
+
+  api:
+    build: .
+    command: uvicorn reli.api.main:app --host 0.0.0.0 --port 8000
+    volumes:
+      - ./src:/app/src
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://reli:password@db:5432/reli_db
+    depends_on:
+      - db
